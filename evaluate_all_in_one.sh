@@ -131,6 +131,12 @@ for model in "${models[@]}"; do
         model_args="pretrained=OpenGVLab/InternVL2-40B,modality=video,max_frames_num=8,device_map=auto"
         num_processes=1
         ;;
+    "qwen36_27_infer_sglang")
+        model_family="eas_sglang"
+        model="qwen36_27_infer_sglang_${num_frames}f"
+        model_args="model_version=qwen36_27_infer_sglang,modality=video,max_frames_num=$num_frames,num_workers=$num_processes,max_image_size=512,image_quality=80,visual_cache_limit=2"
+        launcher=python
+        ;;
     *)
         echo "Unknown model: $model"
         exit -1
