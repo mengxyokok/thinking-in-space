@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VSI-Bench 评测结果</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>VSI-Bench 评测结果</h1>
+        <p id="runMeta">加载中</p>
+      </div>
+      <div class="run-picker">
+        <label for="runSelect">Run</label>
+        <select id="runSelect"></select>
+      </div>
+    </header>
+
+    <main>
+      <section class="summary" id="summary"></section>
+
+      <section class="filters" aria-label="过滤器">
+        <label>
+          类型
+          <select id="typeFilter">
+            <option value="">全部</option>
+          </select>
+        </label>
+        <label>
+          结果
+          <select id="statusFilter">
+            <option value="">全部</option>
+            <option value="correct">正确</option>
+            <option value="partial">部分得分</option>
+            <option value="wrong">错误</option>
+            <option value="empty">空回答</option>
+            <option value="unknown">未知</option>
+          </select>
+        </label>
+        <label>
+          数据集
+          <select id="datasetFilter">
+            <option value="">全部</option>
+          </select>
+        </label>
+        <label>
+          最低分
+          <input id="minScore" type="number" min="0" max="1" step="0.05" placeholder="0" />
+        </label>
+        <label>
+          搜索
+          <input id="searchInput" type="search" placeholder="题目 / 答案 / 预测 / 场景" />
+        </label>
+        <button id="resetButton" type="button">重置</button>
+      </section>
+
+      <section class="type-grid" id="typeGrid" aria-label="类型统计"></section>
+
+      <section class="table-section">
+        <div class="table-head">
+          <div id="resultCount">0 条</div>
+          <div class="table-actions">
+            <label>
+              排序
+              <select id="sortSelect">
+                <option value="id:asc">ID 升序</option>
+                <option value="id:desc">ID 降序</option>
+                <option value="score:asc">分数升序</option>
+                <option value="score:desc">分数降序</option>
+                <option value="type:asc">类型</option>
+              </select>
+            </label>
+            <label>
+              每页
+              <select id="pageSize">
+                <option>25</option>
+                <option selected>50</option>
+                <option>100</option>
+                <option>200</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>类型</th>
+                <th>结果</th>
+                <th>分数</th>
+                <th>问题</th>
+                <th>GT</th>
+                <th>预测</th>
+                <th>场景</th>
+              </tr>
+            </thead>
+            <tbody id="resultBody"></tbody>
+          </table>
+        </div>
+        <div class="pager">
+          <button id="prevPage" type="button">上一页</button>
+          <span id="pageInfo">1 / 1</span>
+          <button id="nextPage" type="button">下一页</button>
+        </div>
+      </section>
+    </main>
+
+    <template id="rowTemplate">
+      <tr class="data-row">
+        <td class="mono" data-field="id"></td>
+        <td data-field="type"></td>
+        <td data-field="status"></td>
+        <td class="mono" data-field="score"></td>
+        <td data-field="question"></td>
+        <td data-field="groundTruth"></td>
+        <td data-field="prediction"></td>
+        <td data-field="scene"></td>
+      </tr>
+      <tr class="detail-row">
+        <td colspan="8">
+          <details>
+            <summary>详情</summary>
+            <div class="detail-grid">
+              <div><strong>Prompt</strong><pre data-field="prompt"></pre></div>
+              <div><strong>Options</strong><pre data-field="options"></pre></div>
+            </div>
+          </details>
+        </td>
+      </tr>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
