@@ -1,0 +1,119 @@
+{
+    "results": {
+        "vsibench": {
+            "alias": "vsibench",
+            "vsibench_score,none": {
+                "overall": 0.0,
+                "object_counting_MRA:.5:.95:.05": 0.0,
+                "tabulated_keys": "overall, object_counting_MRA:.5:.95:.05",
+                "tabulated_results": "0.000, 0.000"
+            },
+            "vsibench_score_stderr,none": "N/A"
+        }
+    },
+    "group_subtasks": {
+        "vsibench": []
+    },
+    "configs": {
+        "vsibench": {
+            "task": "vsibench",
+            "dataset_path": "nyu-visionx/VSI-Bench",
+            "dataset_kwargs": {
+                "token": false
+            },
+            "test_split": "test",
+            "full_docs": false,
+            "process_results_use_image": false,
+            "process_docs": "<function process_docs at 0x723732930d30>",
+            "doc_to_visual": "<function vsibench_doc_to_visual at 0x723732931510>",
+            "doc_to_text": "<function vsibench_doc_to_text at 0x723732931e10>",
+            "doc_to_target": "ground_truth",
+            "process_results": "<function vsibench_process_results at 0x723732932b00>",
+            "description": "",
+            "target_delimiter": " ",
+            "fewshot_delimiter": "\n\n",
+            "num_fewshot": 0,
+            "metric_list": [
+                {
+                    "metric": "vsibench_score",
+                    "aggregation": "<function vsibench_aggregate_results at 0x723732933490>",
+                    "higher_is_better": true
+                }
+            ],
+            "output_type": "generate_until",
+            "generation_kwargs": {
+                "max_new_tokens": 16,
+                "temperature": 0.0,
+                "top_p": 1.0,
+                "num_beams": 1,
+                "do_sample": false,
+                "until": [
+                    "\n\n"
+                ]
+            },
+            "repeats": 1,
+            "should_decontaminate": false,
+            "metadata": [
+                {
+                    "version": 0.0
+                }
+            ],
+            "lmms_eval_specific_kwargs": {
+                "default": {
+                    "pre_prompt": "",
+                    "mca_post_prompt": "Answer with the option's letter from the given choices directly.",
+                    "na_post_prompt": "Please answer the question using a single word or phrase."
+                },
+                "gemini_api": {
+                    "pre_prompt": "",
+                    "mca_post_prompt": "Answer with the option's letter from the given choices directly.",
+                    "na_post_prompt": "Do not response anything other than a single number!"
+                },
+                "gpt4v": {
+                    "pre_prompt": "",
+                    "mca_post_prompt": "Answer with the option's letter from the given choices directly.",
+                    "na_post_prompt": "Do not response anything other than a single number!"
+                },
+                "eas_sglang": {
+                    "pre_prompt": "",
+                    "mca_post_prompt": "Answer with the option's letter from the given choices directly.",
+                    "na_post_prompt": "Do not response anything other than a single number!"
+                }
+            }
+        }
+    },
+    "versions": {
+        "vsibench": "Yaml"
+    },
+    "n-shot": {
+        "vsibench": 0
+    },
+    "higher_is_better": {
+        "vsibench": {
+            "vsibench_score": true
+        }
+    },
+    "n-samples": {
+        "vsibench": {
+            "original": 5130,
+            "effective": 1
+        }
+    },
+    "config": {
+        "model": "eas_sglang",
+        "model_args": "model_version=qwen36_27_infer_sglang,modality=video,max_frames_num=4,num_workers=1",
+        "batch_size": "1",
+        "batch_sizes": [],
+        "device": null,
+        "use_cache": null,
+        "limit": 1.0,
+        "bootstrap_iters": 100000,
+        "gen_kwargs": "",
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+    },
+    "git_hash": "51e089c",
+    "date": "0604_0248"
+}

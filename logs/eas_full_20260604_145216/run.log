@@ -1,0 +1,104 @@
+nohup: ignoring input
+Start evaluating qwen36_27_infer_sglang...
+python -m lmms_eval --model eas_sglang --model_args model_version=qwen36_27_infer_sglang,modality=video,max_frames_num=32,num_workers=16 --tasks vsibench --batch_size 1 --log_samples --log_samples_suffix qwen36_27_infer_sglang_32f --output_path logs/eas_full_20260604_145216/vsibench
+This script was launched with python
+[32m2026-06-04 14:52:20.855[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m308[0m - [1mVerbosity set to INFO[0m
+[32m2026-06-04 14:52:20.855[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m392[0m - [1mEvaluation tracker args: {'output_path': 'logs/eas_full_20260604_145216/vsibench'}[0m
+[32m2026-06-04 14:52:20.860[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m483[0m - [1mSelected Tasks: ['vsibench'][0m
+[32m2026-06-04 14:52:20.868[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36msimple_evaluate[0m:[36m152[0m - [1mSetting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234[0m
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 51400.78it/s]
+[32m2026-06-04 14:52:25.554[0m | [1mINFO    [0m | [36mlmms_eval.evaluator_utils[0m:[36mfrom_taskdict[0m:[36m91[0m - [1mNo metadata found in task config for vsibench, using default n_shot=0[0m
+[32m2026-06-04 14:52:25.559[0m | [1mINFO    [0m | [36mlmms_eval.api.task[0m:[36mbuild_all_requests[0m:[36m389[0m - [1mBuilding contexts for task vsibench on rank 0...[0m
+Building context:   0%|          | 0/5130 [00:00<?, ?it/s]Building context:  27%|██▋       | 1373/5130 [00:00<00:00, 13729.88it/s]Building context:  54%|█████▍    | 2778/5130 [00:00<00:00, 13916.18it/s]Building context:  81%|████████▏ | 4170/5130 [00:00<00:00, 13820.52it/s]Building context: 100%|██████████| 5130/5130 [00:00<00:00, 13889.09it/s]
+[32m2026-06-04 14:52:25.931[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36mevaluate[0m:[36m439[0m - [1mRunning generate_until requests[0m
+Model Responding:   0%|          | 0/5130 [00:00<?, ?it/s][out @ 0x75e3840d7dc0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75e3280eeb40] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75e374037280] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75e310069580] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75e32406b5c0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75e37c172a80] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75e380094cc0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75e320095bc0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75e318032380] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75e304038b80] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75e2f8030840] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75e31c050d40] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75e314039480] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75e30800d900] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75e300031dc0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   0%|          | 1/5130 [00:00<20:01,  4.27it/s][out @ 0x75e2fc10f100] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   0%|          | 22/5130 [00:32<2:07:06,  1.49s/it][out @ 0x75e300512e40] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   0%|          | 23/5130 [00:39<2:38:31,  1.86s/it][out @ 0x75e37c00a000] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   0%|          | 24/5130 [00:45<3:04:25,  2.17s/it][out @ 0x75e304520b40] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   0%|          | 25/5130 [00:52<3:43:37,  2.63s/it][out @ 0x75e2fc6f82c0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 26/5130 [01:03<5:20:18,  3.77s/it][out @ 0x75e2f919bf80] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 27/5130 [01:10<6:06:23,  4.31s/it][out @ 0x75debe08e880] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75db9a7a0e80] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 29/5130 [01:11<4:15:32,  3.01s/it][out @ 0x75d93c1c3940] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 30/5130 [01:15<4:38:02,  3.27s/it][out @ 0x75e2fff66080] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 31/5130 [01:21<5:26:04,  3.84s/it][out @ 0x75e310520080] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 32/5130 [01:26<5:39:10,  3.99s/it][out @ 0x75e304519940] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 33/5130 [01:28<5:10:26,  3.65s/it][out @ 0x75e308e1e440] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 34/5130 [01:35<6:26:56,  4.56s/it][out @ 0x75d897f61ec0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 35/5130 [01:46<8:52:47,  6.27s/it][out @ 0x75e21d19a800] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 36/5130 [02:05<13:40:59,  9.67s/it][out @ 0x75e300acfd80] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 37/5130 [02:11<12:25:14,  8.78s/it][out @ 0x75e2fc167680] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 38/5130 [02:17<11:06:55,  7.86s/it][out @ 0x75e3046be7c0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 39/5130 [02:18<8:24:02,  5.94s/it] [out @ 0x75d664b72100] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 40/5130 [02:21<6:57:55,  4.93s/it][out @ 0x75e232c09940] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 41/5130 [02:23<5:54:00,  4.17s/it][out @ 0x75e3147036c0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 42/5130 [02:24<4:38:52,  3.29s/it][out @ 0x75e37c001e00] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 43/5130 [02:39<9:25:20,  6.67s/it][out @ 0x75e2f8e01400] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 44/5130 [02:42<7:48:52,  5.53s/it][out @ 0x75da3bf5cf00] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 45/5130 [02:45<6:49:59,  4.84s/it][out @ 0x75d1cf6a1b00] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75cfc1363f80] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 47/5130 [02:45<3:44:02,  2.64s/it][out @ 0x75e3207af740] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 48/5130 [02:59<7:46:13,  5.50s/it][out @ 0x75e3082ab780] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 49/5130 [03:03<6:58:05,  4.94s/it][out @ 0x75d794898d40] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 50/5130 [03:05<6:00:47,  4.26s/it][out @ 0x75dfaffaff00] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 51/5130 [03:07<5:00:05,  3.55s/it][out @ 0x75e37c005fc0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 52/5130 [03:10<4:43:47,  3.35s/it][out @ 0x75e307f4b2c0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 53/5130 [03:11<4:02:16,  2.86s/it][out @ 0x75e2fc6f82c0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 54/5130 [03:21<6:54:02,  4.89s/it][out @ 0x75da8c62a4c0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 55/5130 [03:22<5:02:46,  3.58s/it][out @ 0x75dfcdecd080] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 56/5130 [03:27<5:57:42,  4.23s/it][out @ 0x75e2f8e125c0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 57/5130 [03:30<5:13:23,  3.71s/it][out @ 0x75e310adb0c0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 58/5130 [03:39<7:24:19,  5.26s/it][out @ 0x75d762260e00] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 59/5130 [03:41<6:00:34,  4.27s/it][out @ 0x75e2fc6da600] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 60/5130 [03:51<8:26:15,  5.99s/it][out @ 0x75dc1b92b480] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 61/5130 [03:55<7:39:20,  5.44s/it][out @ 0x75e374031d80] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 62/5130 [03:57<6:27:36,  4.59s/it][out @ 0x75e386b6a380] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 63/5130 [03:58<4:41:39,  3.34s/it][out @ 0x75dc39988d40] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|          | 64/5130 [04:04<6:01:45,  4.28s/it][out @ 0x75e21d19a800] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|▏         | 65/5130 [04:09<6:24:11,  4.55s/it][out @ 0x75e196dc5740] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|▏         | 66/5130 [04:25<10:52:48,  7.73s/it][out @ 0x75d4f7f56f00] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|▏         | 67/5130 [04:28<8:50:24,  6.29s/it] [out @ 0x75e3771ba280] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|▏         | 68/5130 [04:30<7:16:14,  5.17s/it][out @ 0x75e38482db80] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|▏         | 69/5130 [04:31<5:38:30,  4.01s/it][out @ 0x75e232c09940] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|▏         | 70/5130 [04:32<4:22:11,  3.11s/it][out @ 0x75dee295d4c0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|▏         | 71/5130 [04:33<3:14:12,  2.30s/it][out @ 0x75e127f51380] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|▏         | 72/5130 [04:35<3:08:19,  2.23s/it]Model Responding:   1%|▏         | 73/5130 [04:36<2:41:24,  1.92s/it][out @ 0x75e21d19a800] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|▏         | 74/5130 [04:39<3:00:00,  2.14s/it][out @ 0x75e3280e3440] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|▏         | 75/5130 [04:51<7:05:41,  5.05s/it][out @ 0x75e3182e7d80] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   1%|▏         | 76/5130 [04:57<7:50:35,  5.59s/it][out @ 0x75e31404f280] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 77/5130 [04:58<5:41:03,  4.05s/it][out @ 0x75dc1b92b480] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 78/5130 [05:06<7:26:58,  5.31s/it]Model Responding:   2%|▏         | 79/5130 [05:07<5:44:44,  4.10s/it][out @ 0x75e323fa8980] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 80/5130 [05:11<5:29:50,  3.92s/it][out @ 0x75e374b61000] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[32m2026-06-04 14:57:38.550[0m | [1mINFO    [0m | [36mlmms_eval.models.eas_sglang[0m:[36m_generate_one[0m:[36m242[0m - [1mAttempt 1 failed with error: 503 Server Error: Service Unavailable for url: http://1710073226254727.cn-shanghai.pai-eas.aliyuncs.com/api/predict/qwen36_27_infer_sglang/v1/chat/completions. Response: upstream connect error or disconnect/reset before headers. reset reason: connection termination[0m
+Model Responding:   2%|▏         | 81/5130 [05:15<5:39:55,  4.04s/it][out @ 0x75e2f919bf80] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 82/5130 [05:18<5:06:40,  3.65s/it][out @ 0x75e3280dd700] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 83/5130 [05:18<3:47:17,  2.70s/it][out @ 0x75e3856492c0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 84/5130 [05:20<3:11:37,  2.28s/it][out @ 0x75e2fc00d0c0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 85/5130 [05:25<4:17:27,  3.06s/it][out @ 0x75d467f70640] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 86/5130 [05:31<5:48:36,  4.15s/it]Model Responding:   2%|▏         | 87/5130 [05:32<4:23:58,  3.14s/it]Model Responding:   2%|▏         | 88/5130 [05:33<3:15:55,  2.33s/it]Model Responding:   2%|▏         | 89/5130 [05:34<2:52:00,  2.05s/it]Model Responding:   2%|▏         | 90/5130 [05:34<2:10:32,  1.55s/it][out @ 0x75e23a4fc240] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 91/5130 [05:36<2:13:57,  1.60s/it][out @ 0x75d1e2171480] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 92/5130 [05:37<2:08:58,  1.54s/it][out @ 0x75e232c09940] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 93/5130 [05:38<1:40:57,  1.20s/it]Model Responding:   2%|▏         | 94/5130 [05:39<1:45:31,  1.26s/it]Model Responding:   2%|▏         | 95/5130 [05:41<2:04:43,  1.49s/it][out @ 0x75d8cff61f00] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 96/5130 [05:43<1:59:35,  1.43s/it][out @ 0x75e307b97d40] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 97/5130 [05:51<4:59:31,  3.57s/it][out @ 0x75e21d19a800] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 98/5130 [05:55<5:13:51,  3.74s/it]Model Responding:   2%|▏         | 99/5130 [05:58<4:41:01,  3.35s/it][out @ 0x75e320897780] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+[out @ 0x75e3280dd700] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 101/5130 [05:59<2:57:05,  2.11s/it][out @ 0x75e376726f00] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 102/5130 [06:04<3:50:03,  2.75s/it][out @ 0x75e3016bc040] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 104/5130 [06:04<2:18:20,  1.65s/it][out @ 0x75ded41b46c0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized
+Model Responding:   2%|▏         | 105/5130 [06:05<2:06:55,  1.52s/it][out @ 0x75d897f61ec0] Option 'pix_fmts' is not a runtime option and so cannot be set after the object has been initialized

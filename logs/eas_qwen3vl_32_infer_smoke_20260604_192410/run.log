@@ -1,0 +1,7 @@
+This script was launched with python
+[32m2026-06-04 19:24:36.745[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m308[0m - [1mVerbosity set to INFO[0m
+[32m2026-06-04 19:24:36.745[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m392[0m - [1mEvaluation tracker args: {'output_path': 'logs/eas_qwen3vl_32_infer_smoke_20260604_192410/vsibench'}[0m
+[32m2026-06-04 19:24:36.750[0m | [33m[1mWARNING [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m416[0m - [33m[1m --limit SHOULD ONLY BE USED FOR TESTING.REAL METRICS SHOULD NOT BE COMPUTED USING LIMIT.[0m
+[32m2026-06-04 19:24:36.750[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m483[0m - [1mSelected Tasks: ['vsibench'][0m
+[32m2026-06-04 19:24:36.759[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36msimple_evaluate[0m:[36m152[0m - [1mSetting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234[0m
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files:  10%|█         | 1/10 [00:00<00:06,  1.49it/s]

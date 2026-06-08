@@ -29,6 +29,8 @@ ckpt
 pretrained/
 LLaVA/
 *logs
+!logs/
+!logs/**
 *.isorted
 temp/
 InternVL/

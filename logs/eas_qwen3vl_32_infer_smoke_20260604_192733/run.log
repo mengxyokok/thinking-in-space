@@ -1,0 +1,50 @@
+This script was launched with python
+[32m2026-06-04 19:27:36.972[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m308[0m - [1mVerbosity set to INFO[0m
+[32m2026-06-04 19:27:36.972[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m392[0m - [1mEvaluation tracker args: {'output_path': 'logs/eas_qwen3vl_32_infer_smoke_20260604_192733/vsibench'}[0m
+[32m2026-06-04 19:27:36.977[0m | [33m[1mWARNING [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m416[0m - [33m[1m --limit SHOULD ONLY BE USED FOR TESTING.REAL METRICS SHOULD NOT BE COMPUTED USING LIMIT.[0m
+[32m2026-06-04 19:27:36.977[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m483[0m - [1mSelected Tasks: ['vsibench'][0m
+[32m2026-06-04 19:27:36.985[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36msimple_evaluate[0m:[36m152[0m - [1mSetting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234[0m
+Traceback (most recent call last):
+  File "/home/mxy/.conda/envs/vsibench/lib/python3.10/site-packages/tenacity/__init__.py", line 470, in __call__
+    result = fn(*args, **kwargs)
+  File "/home/mxy/robot/eval/vsi-bench/lmms_eval/api/task.py", line 952, in download
+    self.dataset = datasets.load_dataset(
+  File "/home/mxy/.conda/envs/vsibench/lib/python3.10/site-packages/datasets/load.py", line 2523, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "/home/mxy/.conda/envs/vsibench/lib/python3.10/site-packages/datasets/load.py", line 2195, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "/home/mxy/.conda/envs/vsibench/lib/python3.10/site-packages/datasets/load.py", line 1838, in dataset_module_factory
+    raise ConnectionError(f"Couldn't reach the Hugging Face Hub for dataset '{path}': {e1}") from None
+ConnectionError: Couldn't reach the Hugging Face Hub for dataset 'nyu-visionx/VSI-Bench': Offline mode is enabled.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mxy/robot/eval/vsi-bench/lmms_eval/__main__.py", line 346, in cli_evaluate
+    results, samples = cli_evaluate_single(args)
+  File "/home/mxy/robot/eval/vsi-bench/lmms_eval/__main__.py", line 499, in cli_evaluate_single
+    results = evaluator.simple_evaluate(
+  File "/home/mxy/robot/eval/vsi-bench/lmms_eval/utils.py", line 527, in _wrapper
+    return fn(*args, **kwargs)
+  File "/home/mxy/robot/eval/vsi-bench/lmms_eval/evaluator.py", line 177, in simple_evaluate
+    task_dict = get_task_dict(tasks, task_manager)
+  File "/home/mxy/robot/eval/vsi-bench/lmms_eval/tasks/__init__.py", line 558, in get_task_dict
+    task_name_from_string_dict = task_manager.load_task_or_group(
+  File "/home/mxy/robot/eval/vsi-bench/lmms_eval/tasks/__init__.py", line 372, in load_task_or_group
+    all_loaded_tasks = dict(collections.ChainMap(*map(self._load_individual_task_or_group, task_list)))
+  File "/home/mxy/robot/eval/vsi-bench/lmms_eval/tasks/__init__.py", line 289, in _load_individual_task_or_group
+    return _load_task(task_config, task=name_or_config)
+  File "/home/mxy/robot/eval/vsi-bench/lmms_eval/tasks/__init__.py", line 259, in _load_task
+    task_object = ConfigurableTask(config=config, model_name=self.model_name)
+  File "/home/mxy/robot/eval/vsi-bench/lmms_eval/api/task.py", line 649, in __init__
+    self.download(self.config.dataset_kwargs)
+  File "/home/mxy/.conda/envs/vsibench/lib/python3.10/site-packages/tenacity/__init__.py", line 330, in wrapped_f
+    return self(f, *args, **kw)
+  File "/home/mxy/.conda/envs/vsibench/lib/python3.10/site-packages/tenacity/__init__.py", line 467, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/home/mxy/.conda/envs/vsibench/lib/python3.10/site-packages/tenacity/__init__.py", line 368, in iter
+    result = action(retry_state)
+  File "/home/mxy/.conda/envs/vsibench/lib/python3.10/site-packages/tenacity/__init__.py", line 411, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x79e49a539f00 state=finished raised ConnectionError>]
+[32m2026-06-04 19:27:45.145[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m366[0m - [31m[1mError during evaluation: RetryError[<Future at 0x79e49a539f00 state=finished raised ConnectionError>]. Please set `--verbosity=DEBUG` to get more information.[0m

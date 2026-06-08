@@ -1,0 +1,218 @@
+{
+    "args": {
+        "config": "",
+        "model": "eas_sglang",
+        "tasks": "vsibench",
+        "model_args": "model_version=qwen3vl_32_infer,modality=video,max_frames_num=32,num_workers=4,max_image_size=512,image_quality=80,visual_cache_limit=2",
+        "num_fewshot": null,
+        "batch_size": "1",
+        "max_batch_size": null,
+        "device": null,
+        "output_path": "/home/mxy/robot/eval/vsi-bench/logs/eas_qwen3vl_32_infer_smoke_20260604_192824/vsibench/0604_0728_qwen3vl_32_infer_32f_eas_sglang_model_args_4a0f3e",
+        "limit": 2.0,
+        "use_cache": null,
+        "cache_requests": null,
+        "check_integrity": false,
+        "write_out": false,
+        "log_samples": true,
+        "wandb_log_samples": false,
+        "log_samples_suffix": "qwen3vl_32_infer_32f",
+        "system_instruction": null,
+        "apply_chat_template": false,
+        "fewshot_as_multiturn": false,
+        "show_config": false,
+        "include_path": null,
+        "gen_kwargs": "",
+        "verbosity": "INFO",
+        "wandb_args": "",
+        "timezone": "America/New_York",
+        "hf_hub_log_args": ",output_path=logs/eas_qwen3vl_32_infer_smoke_20260604_192824/vsibench",
+        "predict_only": false,
+        "seed": [
+            0,
+            1234,
+            1234,
+            1234
+        ],
+        "trust_remote_code": false
+    },
+    "model_configs": {
+        "task": "vsibench",
+        "dataset_path": "nyu-visionx/VSI-Bench",
+        "dataset_kwargs": {
+            "token": false
+        },
+        "test_split": "test",
+        "full_docs": false,
+        "process_results_use_image": false,
+        "process_docs": "<function process_docs at 0x7ae34e678c10>",
+        "doc_to_visual": "<function vsibench_doc_to_visual at 0x7ae34e6793f0>",
+        "doc_to_text": "<function vsibench_doc_to_text at 0x7ae34e679cf0>",
+        "doc_to_target": "ground_truth",
+        "process_results": "<function vsibench_process_results at 0x7ae34e67a9e0>",
+        "description": "",
+        "target_delimiter": " ",
+        "fewshot_delimiter": "\n\n",
+        "num_fewshot": 0,
+        "metric_list": [
+            {
+                "metric": "vsibench_score",
+                "aggregation": "<function vsibench_aggregate_results at 0x7ae34e67b370>",
+                "higher_is_better": true
+            }
+        ],
+        "output_type": "generate_until",
+        "generation_kwargs": {
+            "max_new_tokens": 16,
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "num_beams": 1,
+            "do_sample": false,
+            "until": [
+                "\n\n"
+            ]
+        },
+        "repeats": 1,
+        "should_decontaminate": false,
+        "metadata": [
+            {
+                "version": 0.0
+            }
+        ],
+        "lmms_eval_specific_kwargs": {
+            "default": {
+                "pre_prompt": "",
+                "mca_post_prompt": "Answer with the option's letter from the given choices directly.",
+                "na_post_prompt": "Please answer the question using a single word or phrase."
+            },
+            "gemini_api": {
+                "pre_prompt": "",
+                "mca_post_prompt": "Answer with the option's letter from the given choices directly.",
+                "na_post_prompt": "Do not response anything other than a single number!"
+            },
+            "gpt4v": {
+                "pre_prompt": "",
+                "mca_post_prompt": "Answer with the option's letter from the given choices directly.",
+                "na_post_prompt": "Do not response anything other than a single number!"
+            },
+            "eas_sglang": {
+                "pre_prompt": "",
+                "mca_post_prompt": "Answer with the option's letter from the given choices directly.",
+                "na_post_prompt": "Do not response anything other than a single number!"
+            }
+        }
+    },
+    "logs": [
+        {
+            "doc_id": 0,
+            "doc": {
+                "id": 0,
+                "dataset": "arkitscenes",
+                "scene_name": "41069025",
+                "question_type": "object_counting",
+                "question": "How many table(s) are in this room?",
+                "ground_truth": "4",
+                "options": null,
+                "pruned": false,
+                "prediction": "",
+                "MRA:.5:.95:.05": 0.0
+            },
+            "target": "4",
+            "arguments": [
+                "These are frames of a video.\nHow many table(s) are in this room?\nDo not response anything other than a single number!",
+                {
+                    "max_new_tokens": 16,
+                    "temperature": 0.0,
+                    "top_p": 1.0,
+                    "num_beams": 1,
+                    "do_sample": false,
+                    "until": [
+                        "\n\n"
+                    ]
+                },
+                0,
+                "vsibench",
+                "test"
+            ],
+            "resps": [
+                [
+                    ""
+                ]
+            ],
+            "filtered_resps": [
+                ""
+            ],
+            "doc_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "prompt_hash": "8d84491660511b83d2422a43e0a5c818f90a7c1f1283404ea759df1dfdef2427",
+            "target_hash": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+            "vsibench_score": {
+                "id": 0,
+                "dataset": "arkitscenes",
+                "scene_name": "41069025",
+                "question_type": "object_counting",
+                "question": "How many table(s) are in this room?",
+                "ground_truth": "4",
+                "options": null,
+                "pruned": false,
+                "prediction": "",
+                "MRA:.5:.95:.05": 0.0
+            }
+        },
+        {
+            "doc_id": 1,
+            "doc": {
+                "id": 11,
+                "dataset": "arkitscenes",
+                "scene_name": "41159541",
+                "question_type": "object_counting",
+                "question": "How many chair(s) are in this room?",
+                "ground_truth": "9",
+                "options": null,
+                "pruned": false,
+                "prediction": "",
+                "MRA:.5:.95:.05": 0.0
+            },
+            "target": "9",
+            "arguments": [
+                "These are frames of a video.\nHow many chair(s) are in this room?\nDo not response anything other than a single number!",
+                {
+                    "max_new_tokens": 16,
+                    "temperature": 0.0,
+                    "top_p": 1.0,
+                    "num_beams": 1,
+                    "do_sample": false,
+                    "until": [
+                        "\n\n"
+                    ]
+                },
+                1,
+                "vsibench",
+                "test"
+            ],
+            "resps": [
+                [
+                    ""
+                ]
+            ],
+            "filtered_resps": [
+                ""
+            ],
+            "doc_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "prompt_hash": "278aad58f498f15be1617cbcf5422d7aef2f60cbc8c605e7bbb89baa23e3f3f2",
+            "target_hash": "19581e27de7ced00ff1ce50b2047e7a567c76b1cbaebabe5ef03f7c3017bb5b7",
+            "vsibench_score": {
+                "id": 11,
+                "dataset": "arkitscenes",
+                "scene_name": "41159541",
+                "question_type": "object_counting",
+                "question": "How many chair(s) are in this room?",
+                "ground_truth": "9",
+                "options": null,
+                "pruned": false,
+                "prediction": "",
+                "MRA:.5:.95:.05": 0.0
+            }
+        }
+    ],
+    "time": "0604_0728"
+}
